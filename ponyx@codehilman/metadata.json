@@ -1,7 +1,7 @@
 {
   "uuid": "ponyx@codehilman",
   "name": "Ponyx",
-  "description": "A notch at the top of the screen that expands on hover to show what's playing, the week ahead and your Claude usage limits.",
+  "description": "A notch at the top of the screen that expands on hover to show what's playing, the week ahead and your Claude usage limits.\n\nPrivacy: to show Claude usage, Ponyx reads Claude Code's sign-in token from ~/.claude/.credentials.json (read-only) and sends it only to api.anthropic.com. If Claude Code isn't signed in, nothing is sent. Synced lyrics are looked up on lrclib.net and can be turned off in preferences.",
   "shell-version": [
     "50"
   ],
