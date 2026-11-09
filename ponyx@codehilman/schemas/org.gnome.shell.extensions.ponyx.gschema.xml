@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.ponyx" path="/org/gnome/shell/extensions/ponyx/">
+    <key name="refresh-minutes" type="u">
+      <range min="1" max="60"/>
+      <default>5</default>
+      <summary>Minutes between Claude usage checks</summary>
+    </key>
+    <key name="expand-on-hover" type="b">
+      <default>true</default>
+      <summary>Open the island when the pointer rests on it</summary>
+      <description>When off, the island opens only on click.</description>
+    </key>
+    <key name="show-clock" type="b">
+      <default>true</default>
+      <summary>Show the time and date in the collapsed island</summary>
+    </key>
+    <key name="notch-popups" type="b">
+      <default>true</default>
+      <summary>Show volume, brightness, charger and audio device changes in the island</summary>
+      <description>Replaces GNOME's on-screen display while the island is visible.</description>
+    </key>
+    <key name="scroll-volume" type="b">
+      <default>true</default>
+      <summary>Scroll on the island to change the output volume</summary>
+    </key>
+    <key name="usage-alerts" type="b">
+      <default>true</default>
+      <summary>Notify when Claude usage passes 75% and 90%</summary>
+    </key>
+    <key name="alert-state" type="s">
+      <default>'{}'</default>
+      <summary>Internal: thresholds already announced for each usage window</summary>
+    </key>
+    <key name="usage-cache" type="s">
+      <default>''</default>
+      <summary>Internal: last Claude usage reading and rate-limit end, shown until the next successful check</summary>
+    </key>
+    <key name="show-lyrics" type="b">
+      <default>true</default>
+      <summary>Show lyrics for the playing track</summary>
+      <description>Looked up on lrclib.net by title, artist, album and length.</description>
+    </key>
+    <key name="move-clock" type="b">
+      <default>true</default>
+      <summary>Move the top bar clock to the right so the island has the center</summary>
+    </key>
+  </schema>
+</schemalist>

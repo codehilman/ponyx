@@ -1,0 +1,11 @@
+{
+  "uuid": "ponyx@codehilman",
+  "name": "Ponyx",
+  "description": "A notch at the top of the screen that expands on hover to show what's playing, the week ahead and your Claude usage limits.",
+  "shell-version": [
+    "50"
+  ],
+  "url": "https://github.com/codehilman/ponyx",
+  "settings-schema": "org.gnome.shell.extensions.ponyx",
+  "version-name": "1.0"
+}

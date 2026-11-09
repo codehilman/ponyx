@@ -1,0 +1,459 @@
+.ponyx-island {
+  background-color: #000000;
+  border-radius: 0 0 16px 16px;
+  color: #f5f5f7;
+}
+
+.ponyx-island.expanded {
+  border-radius: 0 0 30px 30px;
+}
+
+/* Collapsed notch */
+
+.ponyx-compact { padding: 0 12px; }
+
+.ponyx-compact-side { spacing: 8px; }
+
+/* With the clock both sides match the wider one (set in extension.js), so the clock stays
+   centered without dead space; only the scrolling ticker needs a fixed slot. */
+.ponyx-compact.clock { spacing: 10px; }
+
+.ponyx-compact-clock { spacing: 5px; }
+
+.ponyx-compact.clock.ticking .ponyx-compact-start { width: 120px; }
+
+.ponyx-ticker-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.ponyx-ticker.paused .ponyx-ticker-label { color: rgba(255, 255, 255, 0.45); }
+
+.ponyx-ticker { margin-right: 10px; }
+
+.ponyx-ticker-fade-start {
+  width: 8px;
+  background-gradient-direction: horizontal;
+  background-gradient-start: #000000;
+  background-gradient-end: rgba(0, 0, 0, 0);
+}
+
+.ponyx-ticker-fade {
+  width: 30px;
+  background-gradient-direction: horizontal;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: #000000;
+}
+
+.ponyx-compact-time {
+  font-size: 13px;
+  font-weight: 800;
+  font-feature-settings: "tnum";
+}
+
+.ponyx-compact-date {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ponyx-compact-art {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background-size: cover;
+  background-color: #2c2c2e;
+}
+
+.ponyx-glyph,
+.ponyx-tab-glyph {
+  color: #d97757;
+  font-weight: 800;
+}
+
+.ponyx-glyph { font-size: 15px; }
+.ponyx-tab-glyph { font-size: 13px; }
+
+.ponyx-ring-small {
+  width: 22px;
+  height: 22px;
+}
+
+.ponyx-ring-glyph {
+  font-size: 12px;
+  font-weight: 800;
+  color: #d97757;
+}
+
+.ponyx-compact-pct {
+  font-size: 12px;
+  font-weight: 700;
+  font-feature-settings: "tnum";
+}
+
+/* Expanded panel */
+
+.ponyx-expanded {
+  padding: 10px 24px 18px 24px;
+  spacing: 12px;
+}
+
+.ponyx-header { spacing: 4px; }
+
+.ponyx-tab {
+  padding: 5px 12px;
+  border-radius: 99px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ponyx-tab:hover,
+.ponyx-tab:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.ponyx-tab:checked {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+.ponyx-tab-box { spacing: 6px; }
+.ponyx-tab-icon { icon-size: 14px; }
+
+.ponyx-icon-button {
+  padding: 6px;
+  border-radius: 99px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ponyx-icon-button StIcon { icon-size: 16px; }
+
+.ponyx-icon-button:hover,
+.ponyx-icon-button:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ponyx-page { spacing: 20px; }
+
+.ponyx-divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.09);
+}
+
+/* Media */
+
+.ponyx-media { width: 300px; }
+.ponyx-media-content { spacing: 4px; }
+.ponyx-media-top { spacing: 14px; padding-bottom: 4px; }
+
+.ponyx-art-frame {
+  width: 96px;
+  height: 96px;
+}
+
+.ponyx-art {
+  border-radius: 16px;
+  background-size: cover;
+  background-color: #1c1c1e;
+}
+
+.ponyx-art-placeholder {
+  icon-size: 36px;
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.ponyx-app-badge { icon-size: 28px; }
+
+.ponyx-track { spacing: 1px; }
+
+.ponyx-title {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ponyx-artist {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ponyx-album {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ponyx-controls { spacing: 6px; }
+
+/* Lyrics */
+
+.ponyx-lyrics {
+  margin-top: 6px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  /* Neutral until extension.js tints it with the album art's color. */
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ponyx-lyric-now {
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ponyx-lyric-plain {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Seek bar */
+
+.ponyx-seek-time {
+  width: 44px;
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  font-feature-settings: "tnum";
+}
+
+.ponyx-seek-remaining { text-align: right; }
+
+.ponyx-seek {
+  height: 14px;
+  -barlevel-height: 4px;
+  -barlevel-background-color: rgba(255, 255, 255, 0.15);
+  -barlevel-active-background-color: #ffffff;
+  -barlevel-overdrive-color: #ffffff;
+  -slider-handle-radius: 5px;
+  color: #ffffff;
+}
+
+.ponyx-control {
+  padding: 7px;
+  border-radius: 99px;
+  color: #ffffff;
+}
+
+.ponyx-control StIcon { icon-size: 16px; }
+.ponyx-control-main StIcon { icon-size: 20px; }
+
+.ponyx-control:hover,
+.ponyx-control:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.ponyx-control:insensitive { color: rgba(255, 255, 255, 0.25); }
+
+.ponyx-empty { spacing: 8px; }
+
+.ponyx-empty-icon {
+  icon-size: 28px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.ponyx-empty-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Calendar */
+
+.ponyx-calendar { spacing: 10px; }
+.ponyx-cal-top { spacing: 10px; }
+
+.ponyx-month {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.ponyx-days { spacing: 2px; }
+
+.ponyx-day {
+  width: 36px;
+  spacing: 1px;
+}
+
+.ponyx-day-name {
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.ponyx-day-num {
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-feature-settings: "tnum";
+}
+
+.ponyx-day.sunday .ponyx-day-num { color: #ff6961; }
+.ponyx-day.today .ponyx-day-name,
+.ponyx-day.today .ponyx-day-num { color: #0a84ff; }
+
+/* Next event */
+
+.ponyx-event { spacing: 7px; }
+
+.ponyx-event-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #0a84ff;
+}
+
+.ponyx-event-time {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0a84ff;
+  font-feature-settings: "tnum";
+}
+
+.ponyx-event-title {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ponyx-event-title.empty { color: rgba(255, 255, 255, 0.4); }
+
+.ponyx-event-more {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Pop-ups */
+
+.ponyx-popup,
+.ponyx-header-popup { spacing: 10px; }
+
+.ponyx-popup { padding: 0 18px; }
+
+.ponyx-header-popup {
+  width: 190px;
+  padding: 0 8px;
+}
+
+.ponyx-popup-icon { icon-size: 16px; }
+
+.ponyx-popup-label {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ponyx-popup-value {
+  width: 36px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+  font-feature-settings: "tnum";
+}
+
+/* Usage bars */
+
+.ponyx-mini-usage,
+.ponyx-models { spacing: 7px; }
+
+.ponyx-usage-row { spacing: 8px; }
+
+.ponyx-usage-name {
+  width: 54px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ponyx-bar {
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.ponyx-bar-fill { border-radius: 3px; }
+
+.ponyx-usage-pct {
+  width: 34px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: right;
+  font-feature-settings: "tnum";
+}
+
+.ponyx-usage-reset {
+  width: 58px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  font-feature-settings: "tnum";
+}
+
+.ponyx-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffb340;
+}
+
+/* Claude tab */
+
+.ponyx-ring-card {
+  width: 112px;
+  spacing: 2px;
+}
+
+.ponyx-ring-large {
+  width: 78px;
+  height: 78px;
+}
+
+.ponyx-ring-value {
+  font-size: 19px;
+  font-weight: 800;
+  font-feature-settings: "tnum";
+}
+
+.ponyx-card-title {
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ponyx-card-sub {
+  font-size: 11px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ponyx-details { spacing: 8px; }
+
+.ponyx-plan {
+  font-size: 15px;
+  font-weight: 800;
+  color: #d97757;
+}
+
+.ponyx-footer { spacing: 10px; }
+
+.ponyx-updated {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.ponyx-pill-button {
+  padding: 5px 14px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ponyx-pill-button:hover,
+.ponyx-pill-button:focus {
+  background-color: rgba(255, 255, 255, 0.18);
+}
