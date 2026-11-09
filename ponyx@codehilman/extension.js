@@ -1155,6 +1155,8 @@ class Island {
         } finally {
             this._fetching = false;
         }
+        if (this._destroyed)
+            return;
         this._refreshButton.label = 'Refresh';
         const cache = serializeUsage(this._usage, this._retryAt);
         if (cache !== this._settings.get_string('usage-cache'))
@@ -1571,6 +1573,9 @@ class Island {
         this._settings.disconnectObject(this);
         this._interfaceSettings.disconnectObject(this);
         this._wallClock.disconnectObject(this);
+        // run_dispose() is needed here: GnomeDesktop.WallClock keeps its own update timeout and
+        // settings connection until it is disposed. Dropping our reference alone leaves it running
+        // until the GC happens to finalize it, so after disable() it would keep waking the shell.
         this._wallClock.run_dispose();
         this._mixer.disconnectObject(this);
         this._power?.disconnectObject(this);
@@ -1589,7 +1594,19 @@ class Island {
         this._setClockMoved(false);
         Main.layoutManager.removeChrome(this.actor);
         this.actor.destroy();
+        this.actor = null;
+
         this._settings = null;
+        this._interfaceSettings = null;
+        this._wallClock = null;
+        this._mixer = null;
+        this._power = null;
+        this._eventSource = null;
+        this._media = null;
+        this._artCache = null;
+        this._lyricsClient = null;
+        this._client = null;
+        this._cancellable = null;
     }
 }
 
